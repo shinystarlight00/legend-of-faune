@@ -8,6 +8,10 @@ import GameOver from './scenes/GameOver'
 const GameConfig: Phaser.Types.Core.GameConfig = {
   width: Math.floor(window.innerWidth),
   height: Math.floor(window.innerHeight),
+  scale: {
+    mode: Phaser.Scale.ScaleModes.RESIZE,
+    autoCenter: Phaser.Scale.CENTER_BOTH
+  },
   parent: 'game',
   scene: [Preloader, MainScene, JoyStickInterface, UserInterface, GameOver],
   title: 'Legend of Faune',
